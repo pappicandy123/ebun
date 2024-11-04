@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebunoluwafoundation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static '' %}style.css">c
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a class="navbar-brand" href="/">Ebunoluwa <br> foundation</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links" id="nav-links" aria-hidden="true">
+                    <li><a href="/">Home</a></li>
+                    <li><a href=" {% url "about" %}">About Us</a></li>
+                    <li><a href="{% url "whatwedo" %}">What We Do</a></li> 
+                    <li><a href=" {% url "contactus" %}">Contact</a></li>
+                    <li><a href="https://www.paypal.com/ncp/payment/Z9WLC3YQQF9GL"><button class="donate-btn">Donate</button></a></li>
+                </ul>
+            </nav>
+
+            <div class="header-content">
+                <h2 class="header-text">Together, we can</h2>
+                <h1 class="header-title">Build a world where every child has privileges</h1>
+                <a href="#" class="read-more-btn">Read More</a>
+            </div>
+        </div>
+    </header>
+    <!-- content -->
+    <div class="content">
+        <div class="content-wrapper">
+            <div class="image-section">
+                <img src="{% static '' %}./img/background2.jpg" alt="Children Image">
+            </div>
+
+            <div class="text-section">
+                <h2>We Believe in Every Child's Potential</h2>
+                <p>
+                    We believe that every child has the right to a safe and happy home in which they can develop to the best of their ability. In Nigeria, many children do not grow up in an environment which enables them to reach their full potential in life. The most vulnerable children, those least likely to have the loving support they deserve, are those with physical and mental challenges, children with HIV/AIDS, and children who have been, for whatever reason, abandoned by their families.
+                </p>
+                <p>
+                    The Ebunoluwa Foundation aims to create an environment in Nigeria in which orphans and vulnerable children get the support they need to have a full, productive, and satisfying life. We do this through three major programme branches:
+                </p>
+                <ul>
+                    <li>We partner with the Eruobodo House home for orphaned and vulnerable children.</li>
+                    <li>We provide scholarships and medical assistance to those who need it and mediate in adoptions to families who can care for these children.</li>
+                    <li>We advocate on behalf of these children both at the community and state level for changes to policies and attitudes towards these children.</li>
+                </ul>
+                <p>
+                    On this website, you will find information on children in Nigeria, and about our current work, our past achievements, and our future goals. The website also aims to provide a portal to groups and individuals around the world who share our desire to support children who are most vulnerable to neglect.
+                </p>
+            </div>
+            
+        </div>
+    </div>
+     <!-- end content -->
+      <!-- Language and Video Section -->
+    <section class="languages-video-section">
+        
+            <div class="languages-section">
+                <h2>A gift of God in a few of Nigeria’s many languages</h2>
+                <ul>
+                    <li>Ebunoluwa = Yoruba (South-western Nigeria)</li>
+                    <li>Ngozi Chukwu = Igbo (South-eastern Nigeria)</li>
+                    <li>Kyauta daga hanun Ubangiji = Hausa (Northern Nigeria)</li>
+                    <li>Esohe = Ora</li>
+                    <li>Eseoghene = Urhobo (Delta region of southern Nigeria)</li>
+                    <li>Eno Abasi = Efik (Calabar state in south-eastern Nigeria)</li>
+                </ul>
+            </div>
+            <div class="video-section">
+                {% comment %} <iframe width="100%" height="315" src="https://www.youtube.com/embed/your-video-id" 
+                title="YouTube video player" frameborder="0" allowfullscreen></iframe> {% endcomment %}
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/UXtY1LF59h8?si=ia9bTBEoo7SEfBNM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section">
+        <div class="container">
+            <h2>Our Partners</h2>
+            <div class="partners-logos">
+                <img src="{% static '' %}./img/ondologo.png" alt="Partner 1">
+                <img src="{% static '' %}./img/ogunlogo.jpeg" alt="Partner 2">
+                <img src="{% static '' %}./img/osunlogo.jpeg" alt="Partner 3">
+                <img src="{% static '' %}./img/osunwomen.jpeg" alt="Partner 4">
+                <img src="{% static '' %}./img/oyo2.jpeg" alt="Partner 5">
+            </div>
+        </div>
+    </section>
+    <!-- Give Us A Hand Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Give us a hand</h2>
+            <p class="cta-text">Support us and change the course of a child’s life today!</p>
+            <a href="https://www.paypal.com/ncp/payment/Z9WLC3YQQF9GL" class="cta-donate-btn">Donate</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>12 Afisman Drive, off Odunyemi Street,<br>
+                   Ikeja, Lagos State.<br>
+                   +234-803 335 7151, +234-7017941737<br>
+                   ebunoluwafoundation@yahoo.com,<br>
+                   info@ebunoluwafoundation.org
+                </p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+        </div>
+     
+    </footer>
+    <!-- <div class="line">
+        <hr class="footer-line">
+        <div class="footer-copyright">
+            <p>Copyright © 2024 EbunOluwa | Designed by <a href="#">SurlTech</a></p>
+        </div>
+    </div> -->
+   
+
+    <script src="{% static '' %}scripts.js"></script>
+</body>
+</html>

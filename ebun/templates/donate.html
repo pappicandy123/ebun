@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate to EbunOluwa Foundation</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <link rel="stylesheet" href="{% static '' %}style.css">
+</head>
+<body>
+
+    {% comment %} <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links" id="nav-links" aria-hidden="true">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="#">What We Do</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><button class="donate-btn">Donate</button></li>
+                </ul>
+            </nav>
+
+            <div class="header-content">
+                <h2 class="header-text">Together, we can</h2>
+                <h1 class="header-title">Build a world where every child has privileges</h1>
+                <a href="#" class="read-more-btn">Read More</a>
+            </div>
+        </div>
+    </header> {% endcomment %}
+      <!-- Donate Section -->
+    
+            <!-- PayPal Donate Button -->
+            <section class="cta-section">
+                <div class="container">
+                    <h2  class="donate-header">Donate to Support EbunOluwa Foundation</h2>
+
+                   <p class="cta-text">Support us and change the course of a child’s life today!</p>
+                </div>
+            </section>
+           
+    
+            <form action="{% url 'stripe_donate' %}" method="POST" id="payment-form">
+                {% csrf_token %}
+                <label for="amount">Donation Amount (USD):</label>
+                <input type="number" name="amount" id="amount" placeholder="Enter amount" required>
+            
+                <div id="card-element"><!-- Stripe Card Element will be inserted here --></div>
+            
+                <button type="submit">Donate</button>
+            </form>
+            
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>12 Afisman Drive, off Odunyemi Street,<br>
+                   Ikeja, Lagos State.<br>
+                   +234-803 335 7151, +234-7017941737<br>
+                   ebunoluwafoundation@yahoo.com,<br>
+                   info@ebunoluwafoundation.org
+                </p>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+     
+    </footer>
+    <!-- <div class="line">
+        <hr class="footer-line">
+        <div class="footer-copyright">
+            <p>Copyright © 2024 EbunOluwa | Designed by <a href="#">SurlTech</a></p>
+        </div>
+    </div> -->
+   
+
+    <script src="{% static '' %}scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var stripe = Stripe('{{ stripe_publishable_key }}');
+            var elements = stripe.elements();
+
+            // Create the card element and mount it to the div with id 'card-element'
+            var card = elements.create('card');
+            card.mount('#card-element');
+
+            // Handle form submission
+            var form = document.getElementById('payment-form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                stripe.createToken(card).then(function(result) {
+                    if (result.error) {
+                        console.error(result.error.message);
+                    } else {
+                        var hiddenInput = document.createElement('input');
+                        hiddenInput.setAttribute('type', 'hidden');
+                        hiddenInput.setAttribute('name', 'stripeToken');
+                        hiddenInput.setAttribute('value', result.token.id);
+                        form.appendChild(hiddenInput);
+
+                        form.submit();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

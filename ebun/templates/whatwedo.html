@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - EbunOluwa Foundation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static '' %}style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a class="navbar-brand" href="/">Ebunoluwa <br> foundation</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links" id="nav-links" aria-hidden="true">
+                    <li><a href="/">Home</a></li>
+                    <li><a href=" {% url "about" %}">About Us</a></li>
+                    <li><a href="{% url "whatwedo" %}">What We Do</a></li> 
+                    <li><a href=" {% url "contactus" %}">Contact</a></li>
+                    <li><a href="https://www.paypal.com/ncp/payment/Z9WLC3YQQF9GL"><button class="donate-btn">Donate</button></a></li>
+                </ul>
+            </nav>
+
+            <div class="header-content">
+                <h2 class="header-text">Together, we can</h2>
+                <h1 class="header-title">Build a world where every child has privileges</h1>
+                <a href="#" class="read-more-btn">Read More</a>
+            </div>
+        </div>
+    </header>
+      <!-- Our Projects Section -->
+      <section class="our-projects">
+        <div class="container">
+            <h1 class="projects-title">Our Projects</h1>
+            
+            <!-- Cards Section -->
+            <div class="project-cards">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <h3 class="project-title">Scholarships</h3>
+                    <p class="project-description">
+                        The Ebunoluwa foundation provides educational, vocational, and rehabilitation support for children in the Eruobodo house and, where finances allow, to some children in other institutions as well...
+                        <span class="read-more">Read More</span>
+                        <span class="more-text">
+                            These scholarships are allocated through referrals from partnering social workers, government officials, and orphanages or remand homes. The scholarships are often part of support initiatives to a specific state institution in cases where a child can either be made more independent or where the scholarship allows the child to return to live in their family.<br><br>
+
+                            The scholarship program is a long-term commitment to the children in question. Once selected, Ebunoluwa foundation intends to assist the child through their entire schooling career. Currently, the foundation is supporting 22 children (11 from Ondo, 7 from Lagos, and 4 from Ogun) at various stages in their educational career. We are able to provide these children with the ability to attend school through the generous support of many donors.
+                        </span>
+                    </p>
+                </div>
+
+                <!-- Add more project cards below similar to this format -->
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <h3 class="project-title">Adoptions</h3>
+                    <p class="project-description">
+                        In Nigeria, custom and traditions have it that children who cannot be cared for by their parents are taken in by someone within their extended family. The idea of taking in, or adopting, a child that is not somehow related to the family, is highly uncommon. The notion of adopting an un related child that has special needs (for example those with physical or mental challenges or are ill with diseases such as sickle cell anemia or HIV) or  those who
+                        <span class="read-more">Read More</span>
+                        <span class="more-text">
+                            are orphaned because of a taboo for instances, children born of incestuous relationships, or children who for variety of reasons are identified as witches) is unheard of.
+                            Children who are abandoned most often find themselves in the state or private orphanages. Most of these institutions do not have the manpower, expertise or resources to care for children who need extra or specialized care. In some states, like Lagos state, when an orphan reaches the age of 8 or 9, they are moved to state remand homes which are institutions for youth criminal and delinquents.
+                            
+                            Every child is a gift. Ebunoluwa foundation believes that social attitudes towards orphans and special needs children must change.  It is not enough to allow them to just ‘survive’. If a loving, caring home can be found for children; adoptions should not only be made possible, but should be encouraged, both within Nigeria and internationally.
+                            
+                            The adoption programme facilitated by Ebunoluwa Foundation is therefore vital for two main reasons:
+                            
+                            Firstly, it greatly improves the lives of the individual children involved. In 2010, the foundation facilitated the adoption of 28 children with suitable families from the Netherlands, Sweden, and New Zealand. Most of these adopted children have physical and medical challenges such as HIV, hepatitis B, they are deaf, has vision problem or sickle cell Anemia.
+                            
+                            Secondly, the success of our programme is that it impact on the attitudes towards vulnerable children in the society. Those who have been involved in the adoptions programme have seen the benefits to the individual children and have understood that each Nigeria child in satisfying lives and grow to be positive contributors to society.
+                            
+                            As part of our on- going effort to monitor the well- being of the children that are adopted outside of Nigeria, Hakeem Ariori was in Sweden and Netherlands between May and June 2010 and Aino Oni- Okpaku in October. Furthermore, government officials from Lagos, Ondo, Ekiti state also visited the children at various times during the year. All have been able to establish that the children are thriving in their new families.
+                            
+                            Furthermore, through the process of working with the orphanages, other children are identified that benefit through the other programme of the Ebunoluwa foundation, such as the medical and scholarships activities.
+                            
+                            Also, the adoption programme puts the foundation in touch with key federal and state government officials as well as in the wider social services including the orphanages and other related services such as the police and immigration services.
+                            
+                            Through its working relationships, the foundation is able to develop a targeted advocacy programme which aims to change legislation, practices and attitudes within the social welfare system.
+                            
+                            Finally, the adoptions programme has provided a financial base from which the foundation can expand its services and outreach programmes. For each foreign adoption, the foundation receives a service fee which supports the foundation’s running costs. Many donations, from the adoption agencies and adopting families further assist the foundation to continue.  
+                        </span>
+                    </p>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <h3 class="project-title">Medical Sponsorship</h3>
+                    <p class="project-description">
+                        Over the years, the Foundation have given medical sponsorship to  so many children either in the Orphanages or parented, who are in dire need of medical attention and whose parents or the Home as the case may be cannot afford their medical bills. The Foundation is able to fund this project through kind and generous donations from adoptive families, individuals and organizations.
+                        <span class="read-more">Read More</span>
+                        <span class="more-text">
+                          
+                        </span>
+                    </p>
+                </div>
+                <!-- Project Card 4 -->
+                <div class="project-card">
+                    <h3 class="project-title">Government Outreaches</h3>
+                    <p class="project-description">
+                        Through our work with adoptions we come into contact with many individuals from various offices of the public sector: federal and state ministry personnel, members in the police force, legal system and immigration officials, managers and staff of orphanages and remand homes etc. the social services which oversees child welfare in Nigeria is grossly underfunded and majority of the personnel is vastly under trained. An attitude of apathy towards the well- being of the children permeates the system. Some staff in the remand homes see the children as beings who have been thrown away by someone else- sometimes we feel the attitude of ‘why should I care for
+                        <span class="read-more">Read More</span>
+                        <span class="more-text">
+                            the children when I have trouble caring for my own at home…?’
+With every contact we make, the staff at Ebunoluwa foundation aim to influence the attitudes and increase the knowledge of these officials. We offer professional advice and support either in funding, seminars, training or in kind donations where ever we can. Through our daily interactions we hope to raise awareness of the fact that every child is a gift: it is not enough to just allow these children to survive; with proper support and love, they will grow to be meaningful members of the society. In protecting these gifts, we improve our society. In protecting these gifts, we improve our society.
+                        </span>
+                    </p>
+                </div>
+                <!-- Project Card 5 -->
+                <div class="project-card">
+                    <h3 class="project-title">Seminars and Workshop</h3>
+                    <p class="project-description">
+                        Ensuring that international adoption is done in the best interest of the child held in Lagos state in 2009.
+                        Protecting the rights of the child held in Akure, Ondo state in 2010
+                        These seminars were given in collaboration with:
+                        
+                        The National Agency for the Prohibition of Traffic in Persons and other Related Matters (NAPTIP)
+                        Child and Future (Holland)
+                        Adoptions Centrum(Sweden)
+                        Approximately 10 participants came from  Read More
+                        <span class="read-more">Read More</span>
+                        <span class="more-text">
+                            each of south western states Ekiti, Ondo, Ogun, Oyo, Osun, Kwara. The participants came from various Government Agencies and NGO’s such as the local Police, Immigration officials, the state Ministry Of Women Affairs, private and state owned orphanages, religious organizations and student unions. The goal of the workshop was to raise awareness on child rights issues and sensitize those present to the needs of children.
+                            Workshop: record keeping
+                            
+                            This one day workshop was sponsored by adoption centrum and was held in Oshogbo, Osun state in October 2010. The focus of the workshop is to promote proper record keeping in the social welfare service sector, including in the offices of the national population commission, the police, immigration, and homes and orphanages.
+                            
+                            
+                        </span>
+                    </p>
+                </div>
+                <!-- Project Card 6 -->
+                <div class="project-card">
+                    <h3 class="project-title">Assistance to the state orphanages</h3>
+                    <p class="project-description">
+                        We provide cash and kind assistances to various orphanages and children homes which assist them in the running of the homes. In kind contributions included the provision of school books, wheel chairs, crutches and clothing.
+
+                        Many homes and orphanages in the states we work are beneficiaries of this project:
+                        
+                        Abiye orphanages & remands home in Oshogbo
+                        
+                        Chirst orphanage in Ondo state
+                        <span class="read-more">Read More</span>
+                        <span class="more-text">
+                            Daughters of Charity in aka Akoka
+
+Erelu Adebayo children’s home in IyinEkiti.
+
+Juvenile remand home in Akure
+
+Lagos state rehabilitation center, Majidu, Ikorodu
+
+Little saints orphanages in Lagos
+
+Living hope care in Ilesha
+
+Mary children’s foundation in Akure
+
+Missionaries of charity in Alapere –Ketu
+
+MMM catholic hospital in Ondo
+
+Ondo state children’s home in Oba Ile
+
+Overcomer’s orphanage, in Ondo state
+
+PAC in Ogbomosho
+
+Optimal Children’s Home.
+                        </span>
+                    </p>
+                </div>
+
+                <!-- Add more project cards as needed -->
+            </div>
+        </div>
+    </section>
+
+   
+
+   
+    <!-- Give Us A Hand Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Give us a hand</h2>
+            <p class="cta-text">Support us and change the course of a child’s life today!</p>
+            <a href="https://www.paypal.com/ncp/payment/Z9WLC3YQQF9GL" class="cta-donate-btn">Donate</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>12 Afisman Drive, off Odunyemi Street,<br>
+                   Ikeja, Lagos State.<br>
+                   +234-803 335 7151, +234-7017941737<br>
+                   ebunoluwafoundation@yahoo.com,<br>
+                   info@ebunoluwafoundation.org
+                </p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+        </div>
+     
+    </footer>
+    <!-- <div class="line">
+        <hr class="footer-line">
+        <div class="footer-copyright">
+            <p>Copyright © 2024 EbunOluwa | Designed by <a href="#">SurlTech</a></p>
+        </div>
+    </div> -->
+   
+
+    <script src="{% static '' %}scripts.js"></script>
+</body>
+</html>

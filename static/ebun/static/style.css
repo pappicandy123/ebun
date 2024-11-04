@@ -1,0 +1,931 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.header {
+    background-image: url(./img/background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    width: 100px; /* Adjust size as needed */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.donate-btn {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.donate-btn:hover {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Header Content Styles */
+.header-content {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    text-align: left;
+}
+
+.header-text {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.header-title {
+    margin-top: 10px;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.read-more-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.read-more-btn:hover {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9); /* Transparent white */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        height: 100vh; /* Expand to full height */
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links li a,
+    .donate-btn {
+        font-size: 24px;
+        color: black; /* Change text color for better visibility on white background */
+    }
+
+    .donate-btn {
+        background-color: transparent; /* Adjust button style to match new background */
+        color: black;
+        border: 1px solid black;
+    }
+
+    .donate-btn:hover {
+        background-color: black;
+        color: white;
+        border: 1px solid black;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .header-content {
+        left: 5%;
+    }
+
+    .header-title {
+        font-size: 32px;
+    }
+
+    .header-text {
+        font-size: 18px;
+    }
+
+    .read-more-btn {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+}
+/* Prevent background scrolling when menu is active */
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    .header-content {
+        top: 35%;
+    }
+
+    .header-title {
+        font-size: 24px;
+    }
+
+    .header-text {
+        font-size: 16px;
+    }
+
+    .read-more-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+/* Hamburger Animation */
+.toggle .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Content Section Styles */
+.content {
+    background-color: #823555; /* Background color */
+    padding: 50px 0;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.text-section {
+    background-color:  #823555;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    flex: 1;
+    min-width: 300px;
+}
+
+.text-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.text-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+}
+
+.text-section ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.text-section ul li {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.image-section {
+    flex: 0.8;
+    min-width: 300px;
+}
+
+.image-section img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-section, .image-section {
+        width: 100%;
+    }
+
+    .text-section {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-section h2 {
+        font-size: 20px;
+    }
+
+    .text-section p, .text-section ul li {
+        font-size: 14px;
+    }
+}
+
+/* Language and Video Section */
+.languages-video-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: white;
+    color: white;
+    padding: 50px 0;
+    gap: 50px; /* Add a gap between text and video */
+    flex-wrap: wrap;
+}
+
+.languages-section {
+    flex: 1;
+    min-width: 300px;
+    background-color: #823555;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.languages-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.languages-section ul {
+    list-style: none;
+}
+
+.languages-section ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.video-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.video-section iframe {
+    border-radius: 10px;
+    width: 100%; /* Ensures video takes up the available space */
+    height: 315px; /* Adjust height as needed */
+}
+
+
+
+/* Partners Section */
+.partners-section {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.partners-section h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.partners-logos img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .languages-video-section {
+        flex-direction: column;
+        gap: 20px; /* Smaller gap for mobile */
+    }
+
+    .languages-section, .video-section {
+        width: 100%;
+    }
+    .partners-logos {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .languages-section ul li {
+        font-size: 16px;
+    }
+
+    .partners-logos img {
+        max-width: 100px;
+    }
+}
+
+/* CTA (Give Us a Hand) Section */
+.cta-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #823555;
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.cta-donate-btn {
+    background-color: white;
+    color: black;
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cta-donate-btn:hover {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #584646;
+    padding: 40px 0;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+}
+
+.footer-content {
+    text-align: right; /* Align text to the right */
+}
+
+.footer-info {
+    max-width: 400px;
+}
+
+.footer-info p {
+    line-height: 1.6;
+}
+
+.footer-social {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.footer-social img {
+    width: 40px;
+    height: 40px;
+    filter: invert(100%); /* Makes icons white for better contrast */
+}
+/* Footer Line */
+.footer-line {
+    width: 100%;
+    border: 0.5px solid white;
+    margin: 20px 0;
+}
+
+/* Copyright Section */
+.footer-copyright {
+    text-align: center;
+    width: 100%;
+}
+
+.footer-copyright p {
+    margin: 0;
+}
+
+.footer-copyright a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-copyright a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        justify-content: center; /* Center the content for smaller screens */
+    }
+
+    .footer-content {
+        text-align: center; /* Center the text on small screens */
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-info {
+        margin-bottom: 20px;
+    }
+}
+
+/* Our Team Section */
+.our-team {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.team-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-description {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.team-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 30px;
+    padding: 20px;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.team-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card image styling */
+.team-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Add border radius to the image */
+    margin-bottom: 20px;
+}
+
+
+.team-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.team-position {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.team-bio {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+.read-more {
+    color: #823555;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.more-text {
+    display: none;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* Our Projects Section */
+.our-projects {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.projects-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%; /* This ensures three cards per row */
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.read-more {
+    color: #823555;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.more-text {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .project-card {
+        width: 45%; /* Adjust to 2 cards per row for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%; /* Full width on mobile */
+    }
+}
+
+/* Contact Page Styling */
+.contact-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact-info,
+.contact-form {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 48%;
+    box-sizing: border-box;
+}
+
+.contact-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.contact-form form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 120px;
+}
+
+.submit-btn {
+    background-color: #823555;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #6b2844;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-info, .contact-form {
+        width: 100%;
+    }
+}
+
+/* Map Section */
+.map-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.map-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Map */
+@media (max-width: 768px) {
+    .map-container iframe {
+        width: 100%;
+    }
+}
+
+/* Donate Section */
+.donate-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.donate-header {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.donate-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.paypal-donate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .donate-header {
+        font-size: 24px;
+    }
+
+    .donate-description {
+        font-size: 16px;
+    }
+}
+
+
+/* Container for the form */
+#payment-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+#payment-form label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Input fields */
+#payment-form input[type="number"],
+#card-element {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input hover and focus effects */
+#payment-form input[type="number"]:focus,
+#card-element.focused {
+    border-color: #58b482;
+    box-shadow: 0px 0px 6px rgba(88, 180, 130, 0.3);
+}
+
+/* Button styling */
+#payment-form button {
+    padding: 12px 20px;
+    background-color: #58b482;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+#payment-form button:hover {
+    background-color: #46a96f;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    #payment-form {
+        max-width: 100%;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    #payment-form label {
+        font-size: 14px;
+    }
+
+    #payment-form input[type="number"],
+    #card-element {
+        padding: 10px;
+    }
+
+    #payment-form button {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+/* Additional styling for a smooth look */
+#card-element {
+    height: 45px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#card-element::placeholder {
+    color: #ccc;
+    font-size: 14px;
+}
+
+#payment-form input[type="number"]::placeholder {
+    color: #bbb;
+    font-size: 14px;
+}

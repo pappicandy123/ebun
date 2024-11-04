@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static '' %}style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a class="navbar-brand" href="/">Ebunoluwa <br> foundation</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links" id="nav-links" aria-hidden="true">
+                    <li><a href="/">Home</a></li>
+                    <li><a href=" {% url "about" %}">About Us</a></li>
+                    <li><a href="{% url "whatwedo" %}">What We Do</a></li> 
+                    <li><a href=" {% url "contactus" %}">Contact</a></li>
+                    <li><a href="https://www.paypal.com/ncp/payment/Z9WLC3YQQF9GL"><button class="donate-btn">Donate</button></a></li>
+                </ul>
+            </nav>
+
+            <div class="header-content">
+                <h2 class="header-text">Together, we can</h2>
+                <h1 class="header-title">Build a world where every child has privileges</h1>
+                <a href="#" class="read-more-btn">Read More</a>
+            </div>
+        </div>
+    </header>
+      <!-- Contact Page Content -->
+      <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Get in Touch Section -->
+                <div class="contact-info">
+                    <h2 class="contact-title">Get in Touch</h2>
+                    <p>12, Afisman drive, off Odunyemi street,<br>
+                       Opposite Ikeja LG, Ikeja, Lagos state.</p>
+                    <p> Ebunoluwaestablishment@gmail.com<br>
+                       info@ebunoluwafoundation.com</p>
+                    <p>+234-803 335 7189, +234-7017941745</p>
+                </div>
+
+                <!-- Message Us Form -->
+                <div class="contact-form">
+                    <h2 class="contact-title">Message Us</h2>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="first_name" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="last_name" placeholder="Last Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Google Map Section -->
+     <section class="map-section">
+        <div class="container">
+            <h2 class="map-title">Find Us Here</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3332.811324743634!2d3.333699750582331!3d6.596750788119105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9220cd2ded5d%3A0xf8b0b3b633c8b2a!2sChrisvicmall!5e0!3m2!1sen!2sng!4v1730620342096!5m2!1sen!2sng" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Give Us A Hand Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Give us a hand</h2>
+            <p class="cta-text">Support us and change the course of a child’s life today!</p>
+            <a href="#" class="cta-donate-btn">Donate</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>12 Afisman Drive, off Odunyemi Street,<br>
+                   Ikeja, Lagos State.<br>
+                   +234-803 335 7151, +234-7017941737<br>
+                   Ebunoluwaestablishment@gmail.com,<br>
+                   info@ebunoluwafoundation.com
+                </p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+        </div>
+     
+    </footer>
+    <!-- <div class="line">
+        <hr class="footer-line">
+        <div class="footer-copyright">
+            <p>Copyright © 2024 EbunOluwa | Designed by <a href="#">SurlTech</a></p>
+        </div>
+    </div> -->
+   
+
+    <script src="{% static '' %}scripts.js"></script>
+</body>
+</html>
